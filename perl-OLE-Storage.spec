@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	OLE
-%define	pnam	Storage
+%define		pdir	OLE
+%define		pnam	Storage
 Summary:	OLE::Storage - an interface to Structured Storage documents
 Summary(pl):	OLE::Storage - interfejs do dokumentów "Structured Storage"
 Name:		perl-OLE-Storage

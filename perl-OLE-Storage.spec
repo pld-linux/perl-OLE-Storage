@@ -10,7 +10,7 @@ Summary(pl):	OLE::Storage - interfejs do dokumentów "Structured Storage"
 Name:		perl-OLE-Storage
 Version:	0.386
 Release:	12
-License:	GPL v2
+License:	GPL v2+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	d87e521546fb3c10270d492ab50f7bab

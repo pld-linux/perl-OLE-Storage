@@ -1,3 +1,6 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	OLE
 %define	pnam	Storage
@@ -5,7 +8,7 @@ Summary:	Perl OLE::Storage module
 Summary(pl):	Modu³ Perla OLE::Storage
 Name:		perl-OLE-Storage
 Version:	0.386
-Release:	10
+Release:	10.1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -31,25 +34,21 @@ Star Word).
 
 %build
 perl Makefile.PL
-
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make}
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{perl_sitearch}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-
-gzip -9nf README Changes
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes README 
 %attr(755,root,root) %{_bindir}/*
-%dir %{perl_sitelib}/OLE
 %{perl_sitelib}/OLE/Storage
 %{perl_sitelib}/OLE/*.pm
 %{_mandir}/man[13]/*

@@ -8,15 +8,15 @@ Summary:	Perl OLE::Storage module
 Summary(pl):	Modu³ Perla OLE::Storage
 Name:		perl-OLE-Storage
 Version:	0.386
-Release:	10.1
+Release:	11
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 URL:		http://www.perl.com/CPAN/modules/by-module/OLE/OLE-Storage-%{version}.readme
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Startup
 BuildRequires:	perl-Unicode-Map
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

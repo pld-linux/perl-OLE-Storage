@@ -8,7 +8,7 @@ Summary:	Perl OLE::Storage module
 Summary(pl):	Modu³ Perla OLE::Storage
 Name:		perl-OLE-Storage
 Version:	0.386
-Release:	11
+Release:	12
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -16,7 +16,7 @@ URL:		http://www.perl.com/CPAN/modules/by-module/OLE/OLE-Storage-%{version}.read
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Startup
 BuildRequires:	perl-Unicode-Map
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,7 +33,8 @@ Star Word).
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 %{!?_without_tests:%{__make} test}
 
@@ -49,6 +50,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README 
 %attr(755,root,root) %{_bindir}/*
-%{perl_sitelib}/OLE/Storage
-%{perl_sitelib}/OLE/*.pm
+%{perl_vendorlib}/OLE/Storage
+%{perl_vendorlib}/OLE/*.pm
 %{_mandir}/man[13]/*

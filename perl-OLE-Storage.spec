@@ -12,6 +12,7 @@ Release:	12
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	d87e521546fb3c10270d492ab50f7bab
 URL:		http://www.perl.com/CPAN/modules/by-module/OLE/OLE-Storage-%{version}.readme
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-Startup

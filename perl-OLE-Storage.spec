@@ -8,7 +8,7 @@ Summary:	Perl OLE::Storage module
 Summary(pl):	Modu³ Perla OLE::Storage
 Name:		perl-OLE-Storage
 Version:	0.386
-Release:	11
+Release:	12
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz

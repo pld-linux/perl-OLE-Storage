@@ -6,6 +6,7 @@ Version:	0.386
 Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
+Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/OLE/OLE-Storage-%{version}.tar.gz
 URL:		http://www.perl.com/CPAN/modules/by-module/OLE/OLE-Storage-%{version}.readme
@@ -31,14 +32,14 @@ Star Word).
 
 %build
 perl Makefile.PL
-%{__make} OPTIMIZE="$RPM_OPT_FLAGS"
+
+%{__make} OPTIMIZE="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{perl_sitearch}
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
 
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf README Changes
 
@@ -47,14 +48,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,Changes}.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
-
 %dir %{perl_sitelib}/OLE
 %{perl_sitelib}/OLE/Storage
 %{perl_sitelib}/OLE/*.pm
-
-%dir %{perl_sitearch}/auto/OLE
-%{perl_sitearch}/auto/OLE/Storage
-
 %{_mandir}/man[13]/*

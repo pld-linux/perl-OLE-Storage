@@ -3,14 +3,14 @@ Summary:	Perl OLE-Storage module
 Summary(pl):	Modu³ Perla OLE-Storage
 Name:		perl-OLE-Storage
 Version:	0.386
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/OLE/OLE-Storage-%{version}.tar.gz
 URL:		http://www.perl.com/CPAN/modules/by-module/OLE/OLE-Storage-%{version}.readme
 BuildRequires:	rpm-perlprov >= 3.0.3-16
-BuildRequires:	perl >= 5.005_03-14
+BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Startup
 BuildRequires:	perl-Unicode-Map
 %requires_eq	perl
@@ -39,14 +39,8 @@ install -d $RPM_BUILD_ROOT%{perl_sitearch}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-(
-  cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/OLE/Storage/
-  sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
-  mv .packlist.new .packlist
-)
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man[13]/* \
-	README Changes
+gzip -9nf README Changes
 
 %clean
 rm -rf $RPM_BUILD_ROOT

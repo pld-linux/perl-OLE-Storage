@@ -35,7 +35,7 @@ Star Word).
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 %{!?_without_tests:%{__make} test}
 
@@ -49,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README 
+%doc Changes README
 %attr(755,root,root) %{_bindir}/*
 %{perl_vendorlib}/OLE/Storage
 %{perl_vendorlib}/OLE/*.pm

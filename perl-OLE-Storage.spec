@@ -3,7 +3,7 @@ Summary:	Perl OLE-Storage module
 Summary(pl):	Modu³ Perla OLE-Storage
 Name:		perl-OLE-Storage
 Version:	0.386
-Release:	5
+Release:	6
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl

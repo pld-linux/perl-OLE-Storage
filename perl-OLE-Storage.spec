@@ -1,13 +1,13 @@
 %include	/usr/lib/rpm/macros.perl
-Summary: 	Perl OLE-Storage module
+Summary:	Perl OLE-Storage module
 Summary(pl):	Modu³ Perla OLE-Storage
-Name: 		perl-OLE-Storage
-Version: 	0.386
-Release: 	4
-Copyright: 	GPL
-Group: 		Development/Languages/Perl
+Name:		perl-OLE-Storage
+Version:	0.386
+Release:	4
+License:	GPL
+Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source: 	ftp://ftp.perl.org/pub/CPAN/modules/by-module/OLE/OLE-Storage-%{version}.tar.gz
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/OLE/OLE-Storage-%{version}.tar.gz
 URL:		http://www.perl.com/CPAN/modules/by-module/OLE/OLE-Storage-%{version}.readme
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005_03-14
@@ -18,12 +18,13 @@ Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-OLE-Storage gives access to the standard Microsoft Windows OLE documents
-(e.g. done by Microsoft Word or Star Word).
+OLE-Storage gives access to the standard Microsoft Windows OLE
+documents (e.g. done by Microsoft Word or Star Word).
 
 %description -l pl
-OLE-Storage umo¿liwia dostêp do dokumentów zapisanych w standardzie Microsoft 
-Windows OLE (np. stworzonych przy pomocy Microsoft Word lub Star Word).
+OLE-Storage umo¿liwia dostêp do dokumentów zapisanych w standardzie
+Microsoft Windows OLE (np. stworzonych przy pomocy Microsoft Word lub
+Star Word).
 
 %prep
 %setup -q -n OLE-Storage-%{version}

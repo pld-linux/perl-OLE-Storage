@@ -6,7 +6,7 @@
 %define		pdir	OLE
 %define		pnam	Storage
 Summary:	OLE::Storage - an interface to Structured Storage documents
-Summary(pl):	OLE::Storage - interfejs do dokumentów "Structured Storage"
+Summary(pl.UTF-8):   OLE::Storage - interfejs do dokumentÃ³w "Structured Storage"
 Name:		perl-OLE-Storage
 Version:	0.386
 Release:	13
@@ -26,8 +26,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 OLE::Storage gives access to the standard Microsoft Windows OLE
 documents (e.g. done by Microsoft Word or Star Word).
 
-%description -l pl
-OLE::Storage umo¿liwia dostêp do dokumentów zapisanych w standardzie
+%description -l pl.UTF-8
+OLE::Storage umoÅ¼liwia dostÄ™p do dokumentÃ³w zapisanych w standardzie
 Microsoft Windows OLE (np. stworzonych przy pomocy Microsoft Word lub
 Star Word).
 

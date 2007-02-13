@@ -6,7 +6,7 @@
 %define		pdir	OLE
 %define		pnam	Storage
 Summary:	OLE::Storage - an interface to Structured Storage documents
-Summary(pl.UTF-8):   OLE::Storage - interfejs do dokumentów "Structured Storage"
+Summary(pl.UTF-8):	OLE::Storage - interfejs do dokumentów "Structured Storage"
 Name:		perl-OLE-Storage
 Version:	0.386
 Release:	13

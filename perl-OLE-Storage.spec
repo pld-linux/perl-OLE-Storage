@@ -14,7 +14,7 @@ License:	GPL v2+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	d87e521546fb3c10270d492ab50f7bab
-URL:		http://www.perl.com/CPAN/modules/by-module/OLE/OLE-Storage-%{version}.readme
+URL:		http://search.cpan.org/dist/OLE-Storage/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Startup
 BuildRequires:	perl-Unicode-Map

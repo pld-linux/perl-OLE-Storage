@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	OLE
 %define		pnam	Storage
 Summary:	OLE::Storage - an interface to Structured Storage documents
